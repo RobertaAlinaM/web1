@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "projecteweb-example"
+version = "0.1.0"
+description = ""
+authors = ["David Sarrat González <113605621+davidsarratgonzalez@users.noreply.github.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+Django = "^5.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
