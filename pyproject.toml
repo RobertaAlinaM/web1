@@ -1,9 +1,8 @@
 [tool.poetry]
-name = "projecteweb-example"
+name = "web1"
 version = "0.1.0"
 description = ""
 authors = ["Roberta Alina Mititelu, Ismael Benataya, Loana Rodrigues Morais"]
-license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
