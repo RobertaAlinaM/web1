@@ -10,7 +10,10 @@
               <h3> Plane </h3>
 
           </div>
-          <div class="box">Boat</div>
+          <div class="box">
+              <h3>Boat</h3>
+                <img id="image_boat" src="{% static 'images/boat.jpg' %}" alt="Boat">
+          </div>
           <div class="box">Train</div>
       </div>
       <div class="row">
@@ -36,7 +39,12 @@
     #image_plane{
       width: 60%;
     }
-
+        
+    #image_boat{
+      width: 60%;
+    }
+    
+    
     </style>
 
 {% endblock %}
