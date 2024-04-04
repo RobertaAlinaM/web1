@@ -5,7 +5,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>{% block title %}Tutorial projecte web{% endblock %}</title>
+  <title>{% block title %}Pollution Web{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
@@ -17,21 +17,31 @@
         <img src="{% static 'images/logo.png'%}" alt="Logo">
     </div>
     <div class="nav-links">
-        <a href="#">Inicio</a>
+        <a href="#">Home</a>
         <div class="dropdown">
             <button class="dropbtn">Transportes</button>
             <div class="dropdown-content">
                 <a href="#">Plane</a>
 
-                <a href="#">Transporte 2</a>
+                <a href="#">Boat</a>
 
-                <a href="#">Transporte 3</a>
+                <a href="#">Train</a>
+
+                <a href="#">Subway</a>
+
+                <a href="#">Car</a>
+
+                <a href="#">Motorcycle</a>
             </div>
         </div>
     </div>
     <div class="login">
-        <a href="{% url 'login' %}"><img src="{% static 'images/icon-user.jpg' %}" alt="Iniciar sesión"></a>
+        <a href="{% url 'login' %}"><img id="image_login" src="{% static 'images/icon-user.png' %}" alt="Login"></a>
     </div>
+    <div class="logout">
+        <a href="{% url 'logout' %}"><img id="image_logout" src="{% static 'images/icon-logout.png' %}" alt="Logout"></a>
+    </div>
+
 </nav>
 
   <main>
@@ -43,11 +53,11 @@
 
   <footer>
     <div class="copyright">
-        <p>&copy; 2024 - Todos los derechos reservados</p>
+        <p>&copy; 2024 - All rights reserved</p>
     </div>
     <div class="footer-links">
-        <img src="{% static 'images/logo.png'%}" alt="Logo">
-        <a href="#">Inicio</a>
+        <img id="image_logo" src="{% static 'images/logo.png'%}" alt="Logo">
+        <a href="#">Home</a>
         <a href="#">Transports</a>
         <a href="#">Contact</a>
     </div>
@@ -61,14 +71,14 @@
 
   /* Estils generals */
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial Black', sans-serif;
     margin: 0;
     padding: 0;
   }
 
   /* Barra de navegación */
   .navbar {
-    background-color: #333;
+    background-color: #333377db;
     color: #fff;
     display: flex;
     justify-content: space-between;
@@ -78,6 +88,14 @@
 
   .logo img {
     width: 50px;
+  }
+
+  #image_login {
+      width: 20%;
+  }
+
+  #image_logout {
+      width: 10%;
   }
 
   .nav-links {
@@ -120,17 +138,17 @@
 
   /* Contenido principal */
   .content {
-  display: flex;
+    display: flex;
     justify-content: center; /* Alinea el contenido horizontalmente */
     flex-direction: column;
     padding: 20px;
-    width: 100%;
-    height: 80vh;
+    width: 95%;
+    height: auto;
   }
 
   /* Footer */
   footer {
-    background-color: #333;
+    background-color: #333377db;
     color: #fff;
     padding: 20px;
     display: flex;
@@ -142,6 +160,12 @@
     color: #fff;
     text-decoration: none;
     margin-right: 20px; }
+
+  #image_logo {
+      width: 2%;
+      height: auto;
+      justify-content: right;
+  }
 
   </style>
 
