@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block content %}
+
   <!-- Contenido Home -->
 
       <div class="row">
@@ -23,8 +24,7 @@
       <div class="row">
           <div class="box">
             <img id="image_subway" src="{% static 'images/subway.jpg' %}" alt="Subway">
-            <h3> Subway </h3>
-
+            <a href="subway.html">SUBWAY</a>
           </div>
           <div class="box">Contenido 5</div>
           <div class="box">
@@ -47,6 +47,7 @@
     background-color: #33337740;
     padding: 20px;
   }
+  
 
     #image_plane{
         width: 60%;
@@ -65,6 +66,29 @@
         justify-content: center;
         width: 60%;
     }
+    
+        .box a {
+            text-align: center;
+            display: flex;
+        }
+
+        .box a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #337; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        box a:hover {
+            background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+        }
+
+        .box a:active {
+            background-color: #004080; /* Color de fondo del botón cuando se hace clic */
+        }
         
     #image_boat{
       width: 60%;
@@ -74,6 +98,7 @@
     }
     
     </style>
+
 
 {% endblock %}
 
