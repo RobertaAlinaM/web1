@@ -7,19 +7,25 @@
       <div class="row">
           <div class="box">
               <img id="image_plane" src="{% static 'images/plane.jpg' %}" alt="Plane">
-              <h3> Plane </h3>
-
+              <h3> PLANE </h3>
           </div>
-          <div class="box">Contenido 2</div>
-          
+          <div class="box">
+                <img id="image_boat" src="{% static 'images/boat.jpg' %}" alt="Boat">
+                <h3>Boat</h3>
+          </div>
+        
           <div class="box">
               <img id="image_train" src="{% static 'images/train.jpg' %}" alt="Train">
               <h3> Train </h3>
           </div>
-      
+
       </div>
       <div class="row">
-          <div class="box">Contenido 4</div>
+          <div class="box">
+            <img id="image_subway" src="{% static 'images/subway.jpg' %}" alt="Subway">
+            <h3> Subway </h3>
+
+          </div>
           <div class="box">Contenido 5</div>
           <div class="box">
               <img id="image_moto" src="{% static 'images/moto.jpg' %}" alt="Motorbike">
@@ -42,6 +48,7 @@
   }
 
     #image_plane{
+      width: 60%;
         justify-content: center;
         align-items: center;
         width: 60%;
@@ -55,6 +62,18 @@
       width: 60%;
     }
 
+    #image_subway{
+        justify-content: center;
+        width: 60%;
+    }
+        
+    #image_boat{
+      width: 60%;
+      justify-content: center;
+      align-items: center;
+      width: 60%;
+    }
+    
     </style>
 
 {% endblock %}
