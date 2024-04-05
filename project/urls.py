@@ -16,11 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.views.generic import TemplateView
+from django.views.generic.base import TemplateView
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("", TemplateView.as_view(template_name="home.html"), name="home"),  # Create a new path for the home page
     path("accounts/", include("accounts.urls")),  # It is very important to include this BEFORE the built-in authentication URLs
     path("accounts/", include("django.contrib.auth.urls")),  # Add the path for the built-in authentication URLs
+    path("boat/", TemplateView.as_view(template_name="boat.html"), name="boat"),
+    path("plane/", TemplateView.as_view(template_name="plane.html"), name="plane"),
+    path("motorbike/", TemplateView.as_view(template_name="motorbike.html"), name="motorbike"),
+    path("subway/", TemplateView.as_view(template_name="subway.html"), name="subway"),
+    path("train/", TemplateView.as_view(template_name="train.html"), name="train"),
+
 ]
+
+
