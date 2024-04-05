@@ -1,144 +1,159 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <title>{% block title %}Tutorial projecte web{% endblock %}</title>
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-
-<body>
-
-  <nav class="navbar">
-    <div class="logo">
-        <h4> Pollution Web </h4>
-        <img src="{% static 'images/logo.png'%}" alt="Logo">
-    </div>
-    <div class="nav-links">
-        <a href="#">Inicio</a>
-        <div class="dropdown">
-            <button class="dropbtn">Transportes</button>
-            <div class="dropdown-content">
-                <a href="#">Plane</a>
-                <a href="#">Transporte 2</a>
-                <a href="#">Transporte 3</a>
+    <html>
+        <head>
+          <meta charset="utf-8">
+          <title>{% block title %}Pollution Web{% endblock %}</title>
+          <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        </head>
+        <body>
+          <nav class="navbar">
+            <div class="logo">
+                <h4> Pollution Web </h4>
+                <img src="{% static 'images/logo.png'%}" alt="Logo">
             </div>
-        </div>
-    </div>
-    <div class="login">
-        <a href="{% url 'login' %}"><img src="{% static 'images/icon-user.jpg' %}" alt="Iniciar sesión"></a>
-    </div>
-</nav>
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Transportes</button>
+                    <div class="dropdown-content">
+                        <a href="#">Plane</a>
+                        <a href="#">Boat</a>
+                        <a href="#">Train</a>
+                        <a href="#">Subway</a>
+                        <a href="#">Car</a>
+                        <a href="#">Motorbike</a>
+                    </div>
+                </div>
+            </div>
+            <div class="login">
+                <a href="{% url 'login' %}"><img id="image_login" src="{% static 'images/icon-user.png' %}" alt="Login"></a>
+            </div>
+            <div class="logout">
+                <a href="{% url 'logout' %}"><img id="image_logout" src="{% static 'images/icon-logout.png' %}" alt="Logout"></a>
+            </div>
+          </nav>
+          <main>
+            <div class="content">
+                {% block content %}
+                {% endblock %}
+            </div>
+          </main>
+          <footer>
+            <div class="copyright">
+                <p>&copy; 2024 - All rights reserved</p>
+            </div>
+            <div class="footer-links">
+                <img id="image_logo" src="{% static 'images/logo.png'%}" alt="Logo">
+                <a href="#">Home</a>
+                <a href="#">Transports</a>
+                <a href="#">Contact</a>
+            </div>
+          </footer>
+        </body>
+    </html>
 
-  <main>
-    <div class="content">
-    {% block content %}
-    {% endblock %}
-    </div>
-  </main>
 
-  <footer>
-    <div class="copyright">
-        <p>&copy; 2024 - Todos los derechos reservados</p>
-    </div>
-    <div class="footer-links">
-        <img src="{% static 'images/logo.png'%}" alt="Logo">
-        <a href="#">Inicio</a>
-        <a href="#">Transports</a>
-        <a href="#">Contact</a>
-    </div>
-  </footer>
+    <style>
+        /* Estils generals */
+        body {
+            font-family: 'Arial Black', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
-</body>
+        /* Barra de navegación */
+        .navbar {
+            background-color: #333377db;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo img {
+            width: 50px;
+        }
+
+        #image_login {
+            width: 20%;
+        }
+
+        #image_logout {
+            width: 10%;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: #fff;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .login img {
+            width: 30px;
+        }
+
+        /* Contenido principal */
+        .content {
+            display: flex;
+            justify-content: center; /* Alinea el contenido horizontalmente */
+            flex-direction: column;
+            padding: 20px;
+            width: 95%;
+            height: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333377db;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-links a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        #image_logo {
+            width: 2%;
+            height: auto;
+            justify-content: right;
+        }
+    </style>
 
 </html>
-
-<style>
-
-  /* Estils generals */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-
-  /* Barra de navegación */
-  .navbar {
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-
-  .logo img {
-    width: 50px;
-  }
-
-  .nav-links {
-    display: flex;
-  }
-
-  .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-  }
-
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    min-width: 160px;
-    z-index: 1;
-  }
-
-  .dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-
-  .login img {
-    width: 30px;
-  }
-
-  /* Contenido principal */
-  .content {
-  display: flex;
-    justify-content: center; /* Alinea el contenido horizontalmente */
-    flex-direction: column;
-    padding: 20px;
-    width: 100%;
-    height: 80vh;
-  }
-
-  /* Footer */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-links a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px; }
-
-  </style>
