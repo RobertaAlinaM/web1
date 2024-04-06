@@ -27,14 +27,19 @@
                 </div>
             </div>
             <div id="div_login_logout">
+                {% if user.is_authenticated %}
+                <div class="logout">
+                    <form action="{% url 'logout' %}" method="post"> <!-- We can add a form to log out here -->
+                      {% csrf_token %}
+                      <button id="logout_btn" type="submit"><img id="image_logout" src="{% static 'images/icon-logout.png' %}" alt="Logout"></button>
+                    </form>
+                </div>
+                {% else %}
                 <div class="login">
                     <a href="{% url 'login' %}"><img id="image_login" src="{% static 'images/icon-user.png' %}" alt="Login"></a>
                 </div>
-                <div class="logout">
-                    <a href="{% url 'logout' %}"><img id="image_logout" src="{% static 'images/icon-logout.png' %}" alt="Logout"></a>
-                </div>
+                {% endif %}
             </div>
-         
           </nav>
           <main>
             <div class="content">
@@ -92,7 +97,6 @@
 
         #image_logout {
             width: 30px;
-            padding-left: 30px;
         }
 
         .nav-links {
@@ -118,6 +122,22 @@
             -webkit-appearance: button; /* for input */
             -moz-user-select: none;
             -ms-user-select: none;
+        }
+
+        #logout_btn {
+            background: none;
+            border: 0;
+            color: inherit;
+            /* cursor: default; */
+            font: inherit;
+            line-height: normal;
+            overflow: visible;
+            padding: 0;
+            -webkit-user-select: none; /* for button */
+            -webkit-appearance: button; /* for input */
+            -moz-user-select: none;
+            -ms-user-select: none;
+            cursor: pointer;
         }
 
         .dropdown {
@@ -155,7 +175,7 @@
             flex-direction: column;
             padding: 20px;
             width: 95%;
-            height: auto;
+            min-height: 70vh;
             margin: auto;
         }
 
