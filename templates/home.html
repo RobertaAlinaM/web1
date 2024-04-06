@@ -7,30 +7,29 @@
     <div class="row">
       <div class="box">
           <img id="image_plane" src="{% static 'images/plane.jpg' %}" alt="Plane">
-          <d href="plane.html">PLANE</d>
+          <a href="plane">PLANE</a>
       </div>
       <div class="box">
           <img id="image_boat" src="{% static 'images/boat.jpg' %}" alt="Boat">
-          <c href="boat.html">BOAT</c>
+          <a href="boat">BOAT</a>
       </div>
       <div class="box">
           <img id="image_train" src="{% static 'images/train.jpg' %}" alt="Train">
-          <b href="train.html">TRAIN</b>
+          <a href="train">TRAIN</a>
       </div>
     </div>
     <div class="row">
       <div class="box">
           <img id="image_subway" src="{% static 'images/subway.jpg' %}" alt="Subway">
-          <a href="subway.html">SUBWAY</a>
+          <a href="subway">SUBWAY</a>
       </div>
       <div class="box">
-          <img id="image_car" src="{% static 'images/car.jpg' %}" alt="Car">
-          <f href="car.html">CAR</f>
-          <span class="text">Texto</span>
+          <img id="image_car" src="{% static 'images/car/car.jpg' %}" alt="Car">
+          <a href="car">CAR</a>
       </div>
       <div class="box">
           <img id="image_moto" src="{% static 'images/moto.jpg' %}" alt="Motorbike">
-          <e href="motorbike.html">MOTORBIKE</e>
+          <a href="motorbike">MOTORBIKE</a>
       </div>
     </div>
 
@@ -48,38 +47,38 @@
             height: auto;
             background-color: #33337740;
             padding: 20px;
-        }
-        
-        .box img {
-            transition: opacity 0.3s ease; /* Agrega una transición suave */
-        }
-
-        .box:hover img {
-            opacity: 0.5; /* Oculta la imagen al pasar el ratón sobre la caja */
+            display: flex;
+            flex-direction: column;
         }
 
         #image_plane {
             width: 60%;
+            margin: auto;
         }
 
         #image_train {
             width: 60%;
+            margin: auto;
         }
 
         #image_moto {
             width: 60%;
+            margin: auto;
         }
 
         #image_subway {
             width: 60%;
+            margin: auto;
         }
 
         #image_car {
             width: 60%;
+            margin: auto;
         }
 
         #image_boat {
             width: 60%;
+            margin: auto;
         }
 
         .box a {
