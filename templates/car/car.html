@@ -1,13 +1,10 @@
+{% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Car Pollution</title>
-</head>
+{% block content %}
+
 <body>
-    <h1> Pollution</h1>
+    <h1>Car Pollution</h1>
     <p>Car pollution, also known as vehicle emissions, refers to the harmful gases and particles released by vehicles as a byproduct of combustion engines burning fuel.
         It's a significant contributor to air pollution, particularly in urban areas where traffic congestion is high.</p>
 
@@ -63,7 +60,6 @@
         </div>
     </div>
 </body>
-</html>
 
 <style>
 
@@ -117,6 +113,6 @@
     opacity: 1;
 }
 
-
-
 </style>
+
+{% endblock %}
