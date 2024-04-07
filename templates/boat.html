@@ -1,13 +1,10 @@
+{% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Boat Pollution</title>
-    </head>
+{% block content %}
+
     <body>
-        <h1>Pollution</h1>
+        <h1>Boat Pollution</h1>
         <p>Pollution is the introduction of substances or energy that alter the environment or the quality of life of living beings. It can take various forms, including air, water, soil, acoustic, light, and thermal pollution, among others.</p>
         <img id="boat_pollution" src="{% static 'images/boat_pollution.jpg' %}" alt="Boat Pollution">
         <h2>The Environmental Impact of Airplanes</h2>
@@ -17,4 +14,5 @@
             <p>These activities can harm marine ecosystems, introduce invasive species, and contribute to marine litter. Efforts to mitigate pollution include regulations, cleaner technologies, and improved waste management practices, but ongoing action is needed to protect marine environments..</p>
            </ul>
     </body>
-</html>
+
+{% endblock %}
