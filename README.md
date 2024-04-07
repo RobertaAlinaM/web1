@@ -4,4 +4,8 @@
 
 ---
 
-
+**Authors:**
+* Loana Rodrigues Morais - O4036247
+* Roberta Alina Mititelu -
+* Ismael Benataya Serghini - 49255464K
+*

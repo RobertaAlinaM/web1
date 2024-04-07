@@ -17,7 +17,9 @@ class Passenger(models.Model):
         return self.num_identification
 
 class Ticket(models.Model):
-    num_ticket = models.CharField(max_length=100, unique=True)
+    num_ticket = models.CharField(max_length=100)
+    origin = models.CharField(max_length=100)
+    destination = models.CharField(max_length=100)
     transport = models.ForeignKey(Transport, on_delete=models.CASCADE)
     passenger = models.ForeignKey(Passenger, on_delete=models.CASCADE)
 
