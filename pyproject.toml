@@ -2,7 +2,7 @@
 name = "web1"
 version = "0.1.0"
 description = ""
-authors = ["Roberta Alina Mititelu, Ismael Benataya, Loana Rodrigues Morais"]
+authors = ["Roberta Alina Mititelu, Ismael Benataya, Loana Rodrigues Morais, "]
 readme = "README.md"
 
 [tool.poetry.dependencies]
